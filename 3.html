@@ -12,16 +12,67 @@
 
   gtag('config', 'UA-144852395-1');
 </script>
+<style>
+  a {
+    color:black;
+    text-decoration:none;
+  }
+  h1 {
+    text-align:center;
+    font-family:"microsoft yahei";
+    font-size:48px;
+    border-bottom:2px black solid;
+    padding:5px;
+    margin:0;
+  }
+  h2 {
+    font-family:"microsoft yahei";
+    font-size:20px;
+  }
+  ul {
+    border-right:2px solid black;
+    padding:20px;
+    width:100px;
+    margin:0;
+  }
+#grid {
+  display:grid;
+  grid-template-columns:150px 1fr;
+}
+#grid ul {
+  padding-left:30px;
+}
+#grid #action {
+  padding-left:20px;
+}
+@media(max-width:500px)
+{
+  #grid {
+    display:block;
+  }
+  ul {
+    border-right:none;
+  }
+  h1 {
+    border-bottom:none;
+  }
+}
+</style>
 </head>
 
 <body>
-  <a href="index.html"><h1>知识分享实验</h1></a>
+  <h1><a href="index.html">知识分享实验</a></h1>
+<div id="grid">
   <ul>
-    <a href="1.html"><li>研究背景</li></a>
-    <a href="2.html"><li>知情同意书</li></a>
-    <a href="3.html"><li>参加实验</li></a>
+    <li><a href="1.html">研究背景</a></li>
+    <li><a href="2.html">知情同意书</a></li>
+    <li><a href="3.html" style="color:red">参加实验</a></li>
   </ul>
-  <h2>参加实验</h2>
-  <p style="margin-bottom:45px">请点击<a href="https://www.wjx.cn/jq/31174153.aspx" target="_blank" title="参加正式实验">此处</a></p>
+  <div id="action">
+    <h2>参加实验</h2>
+    <p style="margin-bottom:45px">请点击<a href="https://www.wjx.cn/jq/31174153.aspx"
+    target="_blank" style="text-decoration:underline" title="参加正式实验">此处</a></p>
+  </div>
+</div>
 </body>
 </html>
