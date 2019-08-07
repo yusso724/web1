@@ -14,7 +14,6 @@
   </script>
   <style>
     a {
-      color:black;
       text-decoration:none;
     }
     h1 {
@@ -28,11 +27,31 @@
 </head>
 
 <body>
-  <a href="index.html"><h1>知识分享实验</h1></a>
+  <h1><a href="index.html">知识分享实验</a></h1>
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+  ">
+  <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color='white';
+      document.querySelector('h1').style.borderColor='white';
+      document.querySelector('#night_day').value='day';
+    } else {
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      document.querySelector('#night_day').value='night';
+    }
+  ">
   <ul>
-    <a href="1.html"><li>研究背景</li></a>
-    <a href="2.html"><li>知情同意书</li></a>
-    <a href="3.html"><li>参加实验</li></a>
+    <li><a href="1.html">研究背景</a></li>
+    <li><a href="2.html">知情同意书</a></li>
+    <li><a href="3.html">参加实验</a></li>
   </ul>
   <p><img src="info.jpg" width=100%></p>
   <p>
