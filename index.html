@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>知识分享</title>
+  <script src="colors.js"></script>
   <meta charset="utf-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144852395-1"></script>
@@ -24,67 +25,10 @@
       padding:5px;
     }
   </style>
-  <script>
-  var body = {
-    SetColor:function(color){
-      document.querySelector('body').style.color = color;
-    },
-    SetBackgroundColor:function(color){
-      document.querySelector('body').style.backgroundColor = color;
-    }
-  }
-  var Links = {
-    SetColor:function(color){
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = color;
-        i = i + 1;
-        }
-    }
-  }
-  var border = {
-    SetColor:function(color){
-      document.querySelector('h1').style.borderColor = color;
-    }
-  }
-
-  function NightDayHandler(self){
-    var target = document.querySelector('body');
-    if(self.value === 'night'){
-      body.SetBackgroundColor('black');
-      body.SetColor('white');
-      border.SetColor('white');
-      self.value='day';
-
-      Links.SetColor('powderblue');
-
-    } else {
-      body.SetBackgroundColor('white');
-      body.SetColor('black');
-      border.SetColor('black');
-      self.value='night';
-
-      Links.SetColor('blue');
-    }
-  }
-  </script>
 </head>
 
 <body>
   <h1><a href="index.html">知识分享实验</a></h1>
-  <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    body.SetBackgroundColor('black');
-    body.SetColor('white');
-    document.querySelector('h1').style.borderColor='white';
-  ">
-  <input type="button" value="day" onclick="
-    var target = document.querySelector('body');
-    body.SetBackgroundColor('white');
-    body.SetColor('black');
-    document.querySelector('h1').style.borderColor='black';
-  ">
   <input type="button" value="night" onclick="
     NightDayHandler(this);
   ">
